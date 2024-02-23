@@ -30,13 +30,7 @@ const Index = () => {
       {/* Placeholder for react-beautiful-dnd DragDropContext */}
       <SimpleGrid columns={columnCount} spacing={4}>
         {rectangles.map((rect) => (
-          <Box key={rect.id} p={2} boxShadow="lg" rounded="md" backgroundColor={rect.bgColor} height={rect.height} width={rect.width} draggable="true" onDragStart={(e) => e.preventDefault()} onDrop={(e) => e.preventDefault()} onMouseEnter={() => setHoveredId(rect.id)} onMouseLeave={() => setHoveredId(hoveredId === rect.id ? null : hoveredId)}>
-            {hoveredId === rect.id && (
-              <Box position="absolute" top="0" right="0" color="gray.600" p="2">
-                <Icon as={FaGripVertical} />
-              </Box>
-            )}
-          </Box>
+          <Box key={rect.id} p={2} boxShadow="lg" rounded="md" backgroundColor={rect.bgColor} height={rect.height} width={rect.width} draggable="true" onDragStart={(e) => e.preventDefault()} onDrop={(e) => e.preventDefault()} onMouseEnter={() => setHoveredId(rect.id)} onMouseLeave={() => setHoveredId(hoveredId === rect.id ? null : hoveredId)}></Box>
         ))}
       </SimpleGrid>
       {/* Placeholder for react-beautiful-dnd Droppable */}
